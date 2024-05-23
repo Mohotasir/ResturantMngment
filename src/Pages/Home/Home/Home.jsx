@@ -7,6 +7,7 @@ import Category from "../Category/Category";
 import Advertise from "../Advertise/Advertise";
 import PopularMenu from "../PopularMenu/PopularMenu";
 import RecomCard from "../RecomendedFooedCard/RecomCard";
+import Feature from "../Features/Feature";
 
 export default function Home() {
   return (
@@ -36,6 +37,7 @@ export default function Home() {
        <Advertise></Advertise>
        <PopularMenu></PopularMenu>
        <RecomCard></RecomCard>
+       <Feature></Feature>
     </div>
   );
 }

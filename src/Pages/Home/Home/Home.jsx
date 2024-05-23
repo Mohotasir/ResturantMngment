@@ -4,6 +4,9 @@ import img1 from "../../../../public/assets/home/02.jpg";
 import img2 from "../../../../public/assets/home/01.jpg";
 import img3 from "../../../../public/assets/home/03.png";
 import Category from "../Category/Category";
+import Advertise from "../Advertise/Advertise";
+import PopularMenu from "../PopularMenu/PopularMenu";
+import RecomCard from "../RecomendedFooedCard/RecomCard";
 
 export default function Home() {
   return (
@@ -30,6 +33,9 @@ export default function Home() {
         </div>
       </Carousel>
        <Category></Category>
+       <Advertise></Advertise>
+       <PopularMenu></PopularMenu>
+       <RecomCard></RecomCard>
     </div>
   );
 }

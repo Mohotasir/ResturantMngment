@@ -2,7 +2,7 @@ export default function Footer() {
     
   return (
     <div>
-      <footer className="footer p-10 bg-neutral text-neutral-content">
+      <footer className="footer p-10 bg-black text-neutral-content">
         <aside>
           <svg
             width="50"
@@ -60,7 +60,7 @@ export default function Footer() {
           </div>
         </nav>
       </footer>
-      <footer className="footer footer-center p-4 bg-base-300 text-base-content">
+      <footer className="footer footer-center p-4 text-white bg-black ">
         <aside>
           <p>Copyright © 2024 - All right reserved by ACME Industries Ltd</p>
         </aside>

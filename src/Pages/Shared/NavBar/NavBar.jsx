@@ -8,12 +8,12 @@ export default function NavBar() {
 
                 }
             }}>Home</NavLink></li>
-            <li><NavLink to="/allpost" style={({ isActive }) => {
+            <li><NavLink to="/menu" style={({ isActive }) => {
                 return {
                     color: isActive && 'orange',
 
                 }
-            }}>Posts</NavLink></li>
+            }}>Our Menu</NavLink></li>
              <li><NavLink to="/service" style={({ isActive }) => {
                         return {
                             color: isActive &&  'orange',
@@ -23,7 +23,7 @@ export default function NavBar() {
     </>
   return (
     <div>
-      <div className="navbar fixed z-10 bg-opacity-30 bg-black text-white">
+      <div className="navbar fixed z-10 bg-opacity-80 bg-black text-white">
         <div className="navbar-start">
           <div className="dropdown">
             <div tabIndex={0} role="button" className="btn btn-ghost lg:hidden">
@@ -49,7 +49,7 @@ export default function NavBar() {
               {options}
             </ul>
           </div>
-          <a className="btn btn-ghost text-xl">daisyUI</a>
+          <a className="btn btn-ghost text-xl">Bristo Boss</a>
         </div>
         <div className="navbar-center hidden lg:flex">
           <ul className="flex gap-8">

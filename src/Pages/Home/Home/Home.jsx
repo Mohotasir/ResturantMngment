@@ -8,6 +8,7 @@ import Advertise from "../Advertise/Advertise";
 import PopularMenu from "../PopularMenu/PopularMenu";
 import RecomCard from "../RecomendedFooedCard/RecomCard";
 import Feature from "../Features/Feature";
+import Testimonial from "../Testimonial/Testimonial";
 
 export default function Home() {
   return (
@@ -38,6 +39,7 @@ export default function Home() {
        <PopularMenu></PopularMenu>
        <RecomCard></RecomCard>
        <Feature></Feature>
+       <Testimonial></Testimonial>
     </div>
   );
 }

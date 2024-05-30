@@ -18,12 +18,19 @@ export default function NavBar() {
                         return {
                             color: isActive &&  'orange',
                            
-                        }}}>Service</NavLink></li> 
+                        }}}>Service</NavLink>
+              </li> 
+             <li><NavLink to="/order" style={({ isActive }) => {
+                        return {
+                            color: isActive &&  'orange',
+                           
+                        }}}>Our Shop</NavLink>
+              </li> 
 
     </>
   return (
     <div>
-      <div className="navbar fixed z-10 bg-opacity-80 bg-black text-white">
+      <div className="navbar fixed py-6 z-10 bg-opacity-80 bg-black text-white">
         <div className="navbar-start">
           <div className="dropdown">
             <div tabIndex={0} role="button" className="btn btn-ghost lg:hidden">

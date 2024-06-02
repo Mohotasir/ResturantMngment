@@ -32,35 +32,35 @@ export default function Order() {
           <TabPanel >
              <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4 max-w-screen-xl mx-auto">
              {
-                salad.map(item => <SingleCard key={item._id} img={item.image} title={item.name} des={item.recipe}></SingleCard>)
+                salad.map(item => <SingleCard key={item._id} item={item}></SingleCard>)
              }
              </div>
           </TabPanel>
           <TabPanel>
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4 max-w-screen-xl mx-auto">
              {
-                pizza.map(item => <SingleCard key={item._id} img={item.image} title={item.name} des={item.recipe}></SingleCard>)
+                pizza.map(item => <SingleCard key={item._id} item={item}></SingleCard>)
              }
              </div>
           </TabPanel>
           <TabPanel>
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4 max-w-screen-xl mx-auto">
              {
-                soup.map(item => <SingleCard key={item._id} img={item.image} title={item.name} des={item.recipe}></SingleCard>)
+                soup.map(item => <SingleCard key={item._id} item={item}></SingleCard>)
              }
              </div>
           </TabPanel>
           <TabPanel>
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4 max-w-screen-xl mx-auto">
              {
-                desert.map(item => <SingleCard key={item._id} img={item.image} title={item.name} des={item.recipe}></SingleCard>)
+                desert.map(item => <SingleCard key={item._id} item={item}></SingleCard>)
              }
              </div>
           </TabPanel>
           <TabPanel>
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4 max-w-screen-xl mx-auto">
              {
-                drinks.map(item => <SingleCard key={item._id} img={item.image} title={item.name} des={item.recipe}></SingleCard>)
+                drinks.map(item => <SingleCard key={item._id} item={item}></SingleCard>)
              }
              </div>
           </TabPanel>

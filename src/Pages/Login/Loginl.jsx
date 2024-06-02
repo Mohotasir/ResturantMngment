@@ -16,8 +16,8 @@ export default function Loginl() {
         const form = e.target;
         const name = form.email.value;
         const pass = form.password.value;
-        const  formData = {name,pass}
-        signInUser(formData)
+        //const  formData = {name,pass}
+        signInUser(name,pass)
         .then(result =>{
             const user = result.user;
             console.log(user)

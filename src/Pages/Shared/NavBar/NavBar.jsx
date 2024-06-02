@@ -1,33 +1,84 @@
+import { useContext } from "react";
 import { Link, NavLink } from "react-router-dom";
-
+import { AuthContext } from "../../../Provider/AuthProvider";
+import { IoCart } from "react-icons/io5";
+import useCart from "../../../hooks/HookCart/useCart";
 export default function NavBar() {
-    const options = <>
-        <li><NavLink to="/" style={({ isActive }) => {
-                return {
-                    color: isActive && 'orange',
-
-                }
-            }}>Home</NavLink></li>
-            <li><NavLink to="/menu" style={({ isActive }) => {
-                return {
-                    color: isActive && 'orange',
-
-                }
-            }}>Our Menu</NavLink></li>
-             <li><NavLink to="/service" style={({ isActive }) => {
-                        return {
-                            color: isActive &&  'orange',
-                           
-                        }}}>Service</NavLink>
-              </li> 
-             <li><NavLink to="/order" style={({ isActive }) => {
-                        return {
-                            color: isActive &&  'orange',
-                           
-                        }}}>Our Shop</NavLink>
-              </li> 
-
+  const { user, logOut } = useContext(AuthContext);
+  const [cart] = useCart();
+  console.log(cart)
+  const handleLogout = () => {
+    logOut()
+      .then()
+      .catch((error) => console.log(error));
+  };
+  const options = (
+    <>
+      <li>
+        <NavLink
+          to="/"
+          style={({ isActive }) => {
+            return {
+              color: isActive && "orange",
+            };
+          }}
+        >
+          Home
+        </NavLink>
+      </li>
+      <li>
+        <NavLink
+          to="/menu"
+          style={({ isActive }) => {
+            return {
+              color: isActive && "orange",
+            };
+          }}
+        >
+          Our Menu
+        </NavLink>
+      </li>
+      <li>
+        <NavLink
+          to="/service"
+          style={({ isActive }) => {
+            return {
+              color: isActive && "orange",
+            };
+          }}
+        >
+          Service
+        </NavLink>
+      </li>
+      <li>
+        <NavLink
+          to="/order"
+          style={({ isActive }) => {
+            return {
+              color: isActive && "orange",
+            };
+          }}
+        >
+          Our Shop
+        </NavLink>
+      </li>
+      <li>
+        <NavLink
+          to="/cart"
+          style={({ isActive }) => {
+            return {
+              color: isActive && "orange",
+            };
+          }}
+        >
+          <button className="flex gap-2 justify-center items-center border rounded-xl p-1 ">
+            <IoCart />
+            <div className="badge badge-secondary">+{cart.length}</div>
+          </button>
+        </NavLink>
+      </li>
     </>
+  );
   return (
     <div>
       <div className="navbar fixed py-6 z-10 bg-opacity-80 bg-black text-white">
@@ -59,13 +110,39 @@ export default function NavBar() {
           <a className="btn btn-ghost text-xl">Bristo Boss</a>
         </div>
         <div className="navbar-center hidden lg:flex">
-          <ul className="flex gap-8">
-            {options}
-          </ul>
+          <ul className="flex gap-8">{options}</ul>
         </div>
         <div className="navbar-end">
-        <Link className="btn  btn-sm py-2 bg border-none mr-2" to="/login">Log in</Link>
-                            <img className="w-[40px] h-[40px] rounded-full mr-2 hover:cursor-pointer" src='' alt="" data-tooltip-id="my-tooltip"  />
+          {user ? (
+            <>
+              <Link
+                onClick={handleLogout}
+                className="btn  btn-sm py-2 bg border-none mr-2"
+              >
+                Log out
+              </Link>
+              <img
+                className="w-[30px] h-[30px] rounded-full"
+                src={user.photoURL}
+                alt=""
+              />
+            </>
+          ) : (
+            <>
+              <Link
+                className="btn  btn-sm py-2 bg border-none mr-2"
+                to="/login"
+              >
+                Log in
+              </Link>
+              <Link
+                className="btn  btn-sm py-2 bg border-none mr-2"
+                to="/signup"
+              >
+                Sign up
+              </Link>
+            </>
+          )}
         </div>
       </div>
     </div>

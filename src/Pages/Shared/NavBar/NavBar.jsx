@@ -64,7 +64,7 @@ export default function NavBar() {
       </li>
       <li>
         <NavLink
-          to="/cart"
+          to="/dashboard/usercart"
           style={({ isActive }) => {
             return {
               color: isActive && "orange",

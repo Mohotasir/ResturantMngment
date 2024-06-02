@@ -4,11 +4,14 @@ import banner from '../../../public/assets/others/authentication2.png'
 import bgImg from '../../../public/assets/others/authentication.png'
 import { useContext,} from 'react';
 import { AuthContext } from '../../Provider/AuthProvider';
+import useAxiosPublic from '../../hooks/Axios/useAxiosPublic';
+import swal from 'sweetalert';
+import SocialLogin from '../Shared/SocialLogin/SocialLogin';
 export default function Signup() {
    
     
     const {createUser,updateProfiles} = useContext(AuthContext)
-    
+    const axiosPublic = useAxiosPublic();
     const handleForm = (e)=>{
         e.preventDefault();
         const form = e.target;
@@ -21,7 +24,18 @@ export default function Signup() {
             const user = result.user;
             console.log(user)
             updateProfiles(name,photo)
-            .then()
+            .then(()=>{
+                const userInfo = {
+                    name: name,
+                    email:email
+                }
+              axiosPublic.post('/users',userInfo)
+               .then((res)=>{
+                 if(res.data.insertedId){
+                     swal("user added successfully !")
+                 }
+               })
+            })
 
         })
     }
@@ -48,6 +62,7 @@ export default function Signup() {
                 <div>
                       <p>Already have an account ? Log in <Link to="/login">here</Link></p>  
                 </div>
+                <SocialLogin></SocialLogin>
             </div>
         </div>
     </div>

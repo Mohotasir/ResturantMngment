@@ -4,6 +4,7 @@ import { loadCaptchaEnginge, LoadCanvasTemplate, validateCaptcha } from 'react-s
 import banner from '../../../public/assets/others/authentication2.png'
 import { useContext, useEffect, useRef, useState } from 'react';
 import { AuthContext } from '../../Provider/AuthProvider';
+import SocialLogin from '../Shared/SocialLogin/SocialLogin';
 export default function Loginl() {
     const captchaRef = useRef(null);
     const [disabled,setDisabled] = useState(true)
@@ -58,6 +59,7 @@ export default function Loginl() {
                 <div>
                       <p>New here ? create a <Link to="/signup">New account</Link></p>  
                 </div>
+                <SocialLogin></SocialLogin>
             </div>
         </div>
     </div>

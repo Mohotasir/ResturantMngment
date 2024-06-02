@@ -1,6 +1,5 @@
+
 import SingleMenu from "../Home/PopularMenu/SingleMenu";
-
-
 export default function MenuCategory({items}) {
   return (
     <div>
@@ -9,6 +8,7 @@ export default function MenuCategory({items}) {
             items.slice(0,7).map(m => <SingleMenu key={m._id} m={m}></SingleMenu>)
           }
       </div>
+      
     </div>
   )
 }

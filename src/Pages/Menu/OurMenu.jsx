@@ -6,6 +6,7 @@ import useMenu from "../../hooks/useMenu/useMenu";
 import MenuCategory from "./MenuCategory";
 import SectionHeader from "../Shared/SectionHeader/SectionHeader";
 import Button from "../Shared/Button/Button";
+import { Link } from "react-router-dom";
 
 export default function OurMenu() {
   const [menu] = useMenu();
@@ -29,58 +30,59 @@ export default function OurMenu() {
       </div>
       <div className="my-3">
         <MenuCategory items={offerd}></MenuCategory>
-        <Button
-        text={"OFFER YOUR FAVOURITE FOOD"}
-        ></Button>
+        <Link to="/order">
+          <Button text={"OFFER YOUR FAVOURITE FOOD"}></Button>
+        </Link>
       </div>
       <div>
         <Cover
-        img={img1}
-        heading={"DESSERTS"}
-        description={"Lorem Ipsum has been the industry’s standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book."}
+          img={img1}
+          heading={"DESSERTS"}
+          description={
+            "Lorem Ipsum has been the industry’s standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book."
+          }
         ></Cover>
-        <MenuCategory
-        items={desert}
-        ></MenuCategory>
-        <Button
-        text={"OFFER YOUR FAVOURITE FOOD"}
-        ></Button>
+        <MenuCategory items={desert}></MenuCategory>
+        <Button text={"OFFER YOUR FAVOURITE FOOD"}></Button>
       </div>
       <div>
         <Cover
-        img={img2}
-        heading={"PIZZA"}
-        description={"Lorem Ipsum has been the industry’s standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book."}
-        >
-        </Cover>
+          img={img2}
+          heading={"PIZZA"}
+          description={
+            "Lorem Ipsum has been the industry’s standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book."
+          }
+        ></Cover>
         <MenuCategory items={pizza}></MenuCategory>
-        <Button
-        text={"OFFER YOUR FAVOURITE FOOD"}
-        ></Button>
+        <Link to="/order">
+          <Button text={"OFFER YOUR FAVOURITE FOOD"}></Button>
+        </Link>
       </div>
       <div>
         <Cover
-        img={img2}
-        heading={"SALAD"}
-        description={"Lorem Ipsum has been the industry’s standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book."}
-        >
-        </Cover>
+          img={img2}
+          heading={"SALAD"}
+          description={
+            "Lorem Ipsum has been the industry’s standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book."
+          }
+        ></Cover>
         <MenuCategory items={salad}></MenuCategory>
-        <Button
-        text={"OFFER YOUR FAVOURITE FOOD"}
-        ></Button>
+        <Link to="/order">
+          <Button text={"OFFER YOUR FAVOURITE FOOD"}></Button>
+        </Link>
       </div>
       <div>
         <Cover
-        img={img1}
-        heading={"SOUP"}
-        description={"Lorem Ipsum has been the industry’s standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book."}
-        >
-        </Cover>
+          img={img1}
+          heading={"SOUP"}
+          description={
+            "Lorem Ipsum has been the industry’s standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book."
+          }
+        ></Cover>
         <MenuCategory items={soup}></MenuCategory>
-        <Button
-        text={"OFFER YOUR FAVOURITE FOOD"}
-        ></Button>
+        <Link to="/order">
+          <Button text={"OFFER YOUR FAVOURITE FOOD"}></Button>
+        </Link>
       </div>
     </div>
   );
